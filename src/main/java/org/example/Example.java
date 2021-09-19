@@ -1,6 +1,7 @@
 package org.example;
 
+import java.io.File;
+
 public class Example {
- String name = "Name";
- String dot = "dot";
+    File file = new File(".");
 }
