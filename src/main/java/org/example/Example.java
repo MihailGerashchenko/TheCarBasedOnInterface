@@ -5,4 +5,6 @@ public class Example {
 
     int b = 8;
     int c = 15;
+    double and = 888;
+    double noad = 465;
 }
