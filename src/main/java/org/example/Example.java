@@ -5,4 +5,6 @@ public class Example {
 
     int b = 8;
     int c = 15;
+    int rr;
+    int d;
 }
