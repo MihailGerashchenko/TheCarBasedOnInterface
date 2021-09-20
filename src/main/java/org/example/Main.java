@@ -1,9 +1,5 @@
 package org.example;
 
-import org.example.example.Lamp;
-import org.example.example.Radio;
-import org.example.example.Switcher;
-
 import java.time.LocalDate;
 
 public class Main {
@@ -19,21 +15,15 @@ public class Main {
         Driver driverPetr = new Driver(Petr, fordriverPetr);
         System.out.println(driverPetr);
         System.out.println("---------------------------------------------------");
-
-        Human Denis = new Human("Denis", Human.Gender.MALE,
-                Human.BloodGroup.FOURTH, Human.RightsForCar.NORIGHTS);
-        MechanicRequirements DenisRequirements = new MechanicRequirements(12,
-                MechanicRequirements.VehicleCategoriesToRestore.SUPERCAR);
-        AutoMechanic DenisMechanic = new AutoMechanic(Denis, DenisRequirements);
-        System.out.println(DenisMechanic);
+        MechanicRequirements requirements = new MechanicRequirements("Sasha", 5, MechanicRequirements.VehicleCategoriesToRestore.SUPERCAR);
+        AutoMechanic mechanicSasha = new AutoMechanic(requirements);
+        System.out.println(mechanicSasha);
+        System.out.println("---------------------------------------------------");
+        Battery batteryForMercedes = new Battery(Battery.KindOfBettery.ELECTRONIC, 5, 24, Battery.KindOfCars.MERCEDES);
+        BatteryForMyCar forMercedes = new BatteryForMyCar(batteryForMercedes, mechanicSasha);
+        System.out.println(forMercedes);
         System.out.println("----------------------------------------------------");
-        BatterySuplement batteryForMercedes = new Battery(Battery.KindOfBettery.ELECTRONIC, 5, 24, Battery.KindOfCars.MERCEDES);
-        System.out.println(batteryForMercedes);
-        System.out.println("----------------------------------------------------");
-        Human human = new Human("Mihail", Human.Gender.MALE,
-                Human.BloodGroup.THIRD, Human.RightsForCar.PROPERTY);
-      //  CarsOwner Mihail = new CarsOwner();
-    //    Car Mercedes = new Car(batteryForMercedes, driverPetr, DenisMechanic, Mihail);
-    //    System.out.println(Mercedes);
+        Car myCar = new Car(forMercedes, driverPetr, mechanicSasha);
+        System.out.println(myCar);
     }
 }

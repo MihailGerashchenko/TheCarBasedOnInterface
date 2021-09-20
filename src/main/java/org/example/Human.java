@@ -1,11 +1,16 @@
 package org.example;
 
-public class Human implements MedicalIssues, Owner {
+public class Human implements MedicalIssues {
     private String name;
     private Gender gender;
     private BloodGroup bloodGroup;
     private RightsForCar rightsForCar;
 
+    public Human() {
+    }
+
+    public Human(RightsForCar rightsForCar) {
+    }
 
     public enum Gender {MALE, FEMALE}
 
@@ -58,10 +63,6 @@ public class Human implements MedicalIssues, Owner {
         return name;
     }
 
-    @Override
-    public RightsForCar rightsForCar() {
-        return rightsForCar;
-    }
 
     @Override
     public BloodGroup bloodGroup() {

@@ -3,25 +3,22 @@ package org.example;
 import java.time.LocalDate;
 
 public class Car {
-    private BatterySuplement batterySuplement;
+    private BatteryForMyCar batteryForMyCar;
     private Driver driver;
     private AutoMechanic autoMechanic;
-    private CarsOwner owner;
 
-
-    public Car(BatterySuplement batterySuplement, Driver driver, AutoMechanic autoMechanic, CarsOwner owner) {
-        this.batterySuplement = batterySuplement;
+    public Car(BatteryForMyCar batteryForMyCar, Driver driver, AutoMechanic autoMechanic) {
+        this.batteryForMyCar = batteryForMyCar;
         this.driver = driver;
         this.autoMechanic = autoMechanic;
-        this.owner = owner;
     }
 
-    public BatterySuplement getBatterySuplement() {
-        return batterySuplement;
+    public BatteryForMyCar getBatteryForMyCar() {
+        return batteryForMyCar;
     }
 
-    public void setBatterySuplement(BatterySuplement batterySuplement) {
-        this.batterySuplement = batterySuplement;
+    public void setBatteryForMyCar(BatteryForMyCar batteryForMyCar) {
+        this.batteryForMyCar = batteryForMyCar;
     }
 
     public Driver getDriver() {
@@ -40,21 +37,12 @@ public class Car {
         this.autoMechanic = autoMechanic;
     }
 
-    public CarsOwner getOwner() {
-        return owner;
-    }
-
-    public void setOwner(CarsOwner owner) {
-        this.owner = owner;
-    }
-
     @Override
     public String toString() {
         return "Car{" +
-                "batterySuplement=" + batterySuplement +
+                "batteryForMyCar=" + batteryForMyCar +
                 ", driver=" + driver +
                 ", autoMechanic=" + autoMechanic +
-                ", owner=" + owner +
                 '}';
     }
 }
