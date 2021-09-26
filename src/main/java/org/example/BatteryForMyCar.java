@@ -9,6 +9,9 @@ public class BatteryForMyCar {
         this.autoMechanic = autoMechanic;
     }
 
+    public BatteryForMyCar(Battery.KindOfBettery kindOfBettery, int i, int i1, Battery.KindOfCars kindOfCars, AutoMechanic autoMechanic) {
+    }
+
     public BatterySuplement getButterySuplement() {
         return butterySuplement;
     }
